@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Room : MonoBehaviour {
 
+	public int id;
+	public Sprite neutral;
+	public Sprite claimedByP1;
+	public Sprite claimedByP2;
+	public bool isClaimed;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,5 +18,13 @@ public class Room : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void GetClaimed(int playerNum){
+		if (playerNum == 1) {
+			GetComponent<SpriteRenderer> ().sprite = claimedByP1;
+		} else if (playerNum == 2) {
+			GetComponent<SpriteRenderer> ().sprite = claimedByP2;
+		}
 	}
 }
