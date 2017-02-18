@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61516605500957954}
   - component: {fileID: 50705153935420852}
   - component: {fileID: 114282302393654358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlueGhosty
   m_TagString: Untagged
   m_Icon: {fileID: 0}

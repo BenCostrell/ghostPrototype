@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61612421834709892}
   - component: {fileID: 50559019081185988}
   - component: {fileID: 114007864803096262}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PinkGhosty
   m_TagString: Untagged
   m_Icon: {fileID: 0}

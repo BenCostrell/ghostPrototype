@@ -306,6 +306,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
   isClaimable: 0
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &258317743
@@ -406,6 +411,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 31a4571e2f419d14a9d27dc74a6bcd7d, type: 3}
   claimedByP2: {fileID: 21300000, guid: ca57f82d70b92274892af994475403eb, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &260877933
@@ -572,7 +582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 323459522}
   - component: {fileID: 323459523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NorthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,6 +805,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
   isClaimable: 0
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &382119603
@@ -837,8 +852,6 @@ MonoBehaviour:
     type: 2}
   ghostPrefabP2: {fileID: 1407956115763192, guid: 7ba26fe27b1dd44dfbc8e623b197500c,
     type: 2}
-  player1Ready: 0
-  player2Ready: 0
 --- !u!4 &382119605
 Transform:
   m_ObjectHideFlags: 0
@@ -940,6 +953,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
   isClaimable: 0
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &453803738
@@ -1040,6 +1058,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 4fa06e1f50a48bf4591f12f6094d5227, type: 3}
   claimedByP2: {fileID: 21300000, guid: d2c8b04be5afd834e84d4913a305bfdc, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &464708511
@@ -1051,7 +1074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464708512}
   - component: {fileID: 464708513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EastWall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,6 +1292,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: e8fe13b3a240b494ba0921923bcff2b8, type: 3}
   claimedByP2: {fileID: 21300000, guid: eb1b8ce407724354eac69528dddfdff2, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &538987117
@@ -1766,6 +1794,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 98f813831bababe4f97398dff27a1b55, type: 3}
   claimedByP2: {fileID: 21300000, guid: aa288eeac1cf7034a8d31e0f12ac67e6, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &904757638
@@ -1906,7 +1939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951611827}
   - component: {fileID: 951611828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SouthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2066,6 +2099,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: bd53ce47fcd79f94684f0d2ab55d6cf4, type: 3}
   claimedByP2: {fileID: 21300000, guid: 8a9e003a3fddedf4395f7dfe399efef4, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1035376534
@@ -2684,6 +2722,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 16221076c22bcdc4ea8985a7453bb452, type: 3}
   claimedByP2: {fileID: 21300000, guid: 15b1eadd73288fe40929c707cb001046, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1379849312
@@ -2898,6 +2941,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: d8405104e5dfc224babb2364b2912b64, type: 3}
   claimedByP2: {fileID: 21300000, guid: bcd6c0096b19f1e408cbd49bd390a3a2, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1478621962
@@ -3016,6 +3064,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
   isClaimable: 0
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1572051216
@@ -3159,6 +3212,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 4fda218d9b6ba5b46a57353bf61c53ec, type: 3}
   claimedByP2: {fileID: 21300000, guid: 096f16accdafaf2499d44dfa98e4ecb6, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1621625999
@@ -3447,6 +3505,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: a0b6f13d79d058f409ec152ff2197c0f, type: 3}
   claimedByP2: {fileID: 21300000, guid: 0645c7b7ab9440847836bd0c0b6c6d2a, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1716268796
@@ -3590,6 +3653,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: c83eef85b94c0a44bb676bb7c47ff7d8, type: 3}
   claimedByP2: {fileID: 21300000, guid: 246163d96ee8ddc46b24967ff248750e, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1742042673
@@ -3695,6 +3763,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
   isClaimable: 0
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1839672228
@@ -3881,6 +3954,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 73b2d9e23b17b0143a4d479025bd2c6a, type: 3}
   claimedByP2: {fileID: 21300000, guid: 7ddfc433d62d8384daf931a2d1f86bed, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &1899965275
@@ -4024,6 +4102,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: fe738e9d34e366d47b65c40339bc631a, type: 3}
   claimedByP2: {fileID: 21300000, guid: 024d8dce1ed89c2498c3b3548bac13db, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &2011682871
@@ -4124,6 +4207,11 @@ MonoBehaviour:
   claimedByP1: {fileID: 21300000, guid: 5b4a4a72f3bb7c54f97eafc01bf89737, type: 3}
   claimedByP2: {fileID: 21300000, guid: d5cbec14cd79ad9479660b66e0bdbcba, type: 3}
   isClaimable: 1
+  isSpoopyforPink: 0
+  isSpoopyforBlue: 0
+  spoopTimer: 0
+  spoopLimit: 10
+  whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
 --- !u!1 &2016802401
@@ -4467,7 +4555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120014186}
   - component: {fileID: 2120014187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4510,7 +4598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128162651}
   - component: {fileID: 2128162652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EastWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
