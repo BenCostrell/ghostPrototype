@@ -10,6 +10,7 @@ TagManager:
   - Box
   - ClaimableRoomsObj
   - ObjectManager
+  - GameManager
   layers:
   - Default
   - TransparentFX

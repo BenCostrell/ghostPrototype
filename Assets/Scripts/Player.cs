@@ -11,10 +11,12 @@ public class Player : MonoBehaviour {
 	private List<GameObject> objectsClaimed;
 	public Room currentRoom;
 	public int maxRoomClaims;
+	public int maxObjectClaims;
 	public Sprite neutralSprite;
 	public Sprite boxHoldingSprite;
 	private bool holdingBox;
 	private ObjectManager objectManager;
+	private GameManager gameManager;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour {
 		InitializeLists ();
 		holdingBox = false;
 		objectManager = GameObject.FindGameObjectWithTag ("ObjectManager").GetComponent<ObjectManager>();
+		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager> ();
 	}
 	
 	// Update is called once per frame
@@ -51,16 +54,15 @@ public class Player : MonoBehaviour {
 
 	void ProcessInput(){
 		if (Input.GetButtonDown ("Button1_P" + playerNum)) {
-			if (!holdingBox && (GetComponentInChildren<ObjectGrabber>().objectInRange != null) && (roomsClaimed.Count < maxRoomClaims)) {
+			if (!holdingBox && (GetComponentInChildren<ObjectGrabber>().objectInRange != null)) {
 				GameObject objInRange = GetComponentInChildren<ObjectGrabber> ().objectInRange;
-				if (objInRange.tag == "Box") {
+				if ((objInRange.tag == "Box") && (roomsClaimed.Count < maxRoomClaims)) {
 					GrabBox (objInRange);
-				} else {
-					if ((objectsClaimed.Count < 3) && (objInRange.GetComponent<ObjectProperties>().ownerNum == 0)) {
+				} else if ((objInRange.tag == "HouseObjects") && (objectsClaimed.Count < maxObjectClaims))
+					if (objInRange.GetComponent<ObjectProperties>().ownerNum == 0) {
 						ClaimObject (objInRange);
 					}
 				}
-			}
 			else if (holdingBox && (currentRoom != null)) {
 				if ((roomsClaimed.Count < maxRoomClaims) && (currentRoom.ownerNum == 0) && currentRoom.isClaimable) {
 					ClaimRoom ();
@@ -78,6 +80,7 @@ public class Player : MonoBehaviour {
 	void ClaimObject(GameObject obj){
 		objectsClaimed.Add (obj);
 		objectManager.ClaimObjects (obj.GetComponent<ObjectProperties> ().objectName, playerNum);
+		CheckIfReady ();
 	}
 
 	void ClaimRoom(){
@@ -85,6 +88,13 @@ public class Player : MonoBehaviour {
 		GetComponent<SpriteRenderer> ().sprite = neutralSprite;
 		roomsClaimed.Add (currentRoom.id);
 		currentRoom.GetClaimed (playerNum);
+		CheckIfReady ();
+	}
+
+	void CheckIfReady(){
+		if ((roomsClaimed.Count == maxRoomClaims) && (objectsClaimed.Count == maxObjectClaims)) {
+			gameManager.PlayerReady (playerNum);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){

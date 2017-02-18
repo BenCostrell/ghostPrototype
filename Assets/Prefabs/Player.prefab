@@ -164,6 +164,7 @@ MonoBehaviour:
   playerNum: 1
   currentRoom: {fileID: 0}
   maxRoomClaims: 6
+  maxObjectClaims: 3
   neutralSprite: {fileID: 0}
   boxHoldingSprite: {fileID: 0}
 --- !u!212 &212581998019612168

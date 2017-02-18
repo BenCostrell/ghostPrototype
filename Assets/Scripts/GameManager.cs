@@ -15,17 +15,30 @@ public class GameManager : MonoBehaviour {
 	public Sprite boxHoldingSpriteP2;
 	private GameObject player1;
 	private GameObject player2;
+	public GameObject ghostPrefabP1;
+	public GameObject ghostPrefabP2;
+	private GameObject murderBabyFan;
+	private bool player1Ready;
+	private bool player2Ready;
+	private bool ghostPhase;
 
 	// Use this for initialization
 	void Start () {
 		InitializePlayers();
 		InitializeBoxes ();
+		player1Ready = false;
+		player2Ready = false;
+		ghostPhase = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("Reset")) {
 			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
+		if (player1Ready && player2Ready && !ghostPhase) {
+			ItsMurderBabyTime ();
+			ghostPhase = true;
 		}
 	}
 
@@ -51,7 +64,22 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	void ItsMurderBabyTime(){
-		
+	public void PlayerReady(int playerNum){
+		if (playerNum == 1) {
+			player1Ready = true;
+		} else if (playerNum == 2) {
+			player2Ready = true;
+		}
+	}
+
+	public void ItsMurderBabyTime(){
+		Destroy (player1);
+		Destroy (player2);
+		InitializeGhosts ();
+	}
+
+	void InitializeGhosts(){
+		Instantiate (ghostPrefabP1, spawnP1, Quaternion.identity);
+		Instantiate (ghostPrefabP2, spawnP2, Quaternion.identity);
 	}
 }
