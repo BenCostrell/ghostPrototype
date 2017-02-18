@@ -13,6 +13,7 @@ public class ObjectProperties : MonoBehaviour {
 	public GameObject blueGhost;
 	public GameObject pinkGhost;
 	public GameObject spoopRing;
+	public Room currentRoom;
 
 	public string objectName;
 
@@ -112,13 +113,39 @@ public class ObjectProperties : MonoBehaviour {
 					Instantiate (pinkGhost, transform.position, Quaternion.identity); 
 				}
 			}
+
 			if (Input.GetButtonDown ("Button2_P" + ownerNum)) 
 			{
 				Instantiate (spoopRing, transform.position, Quaternion.identity);
+				currentRoom.getSpoopy (ownerNum);
 			}
-				
-				
+
 		}
-			
 	}
+		
+	void OnTriggerEnter2D(Collider2D collider)
+	{ 
+		if (collider.gameObject.tag == "Room") 
+		{
+			currentRoom = collider.gameObject.GetComponent<Room> (); 
+		} 
+	}
+
+	void getSpooped () 
+	{
+		if (currentRoom.isSpoopyforBlue == true && ownerNum == 1)
+		{ 
+			possessed = false;
+			rb.velocity = new Vector2 (0,0);
+			Instantiate (blueGhost, transform.position, Quaternion.identity);
+		}
+
+		if (currentRoom.isSpoopyforPink && ownerNum == 2) 
+		{
+			possessed = false;
+			rb.velocity = new Vector2 (0,0);
+			Instantiate (pinkGhost, transform.position, Quaternion.identity); 
+		}
+	}
+		
 }
