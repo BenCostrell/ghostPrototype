@@ -11,7 +11,8 @@ public class ObjectProperties : MonoBehaviour {
 	public Sprite blue;
 	public Sprite pink;
 	public GameObject blueGhost;
-	public GameObject pinkGhost; 
+	public GameObject pinkGhost;
+	public GameObject spoopRing;
 
 	public string objectName;
 
@@ -111,6 +112,12 @@ public class ObjectProperties : MonoBehaviour {
 					Instantiate (pinkGhost, transform.position, Quaternion.identity); 
 				}
 			}
+			if (Input.GetButtonDown ("Button2_P" + ownerNum)) 
+			{
+				Instantiate (spoopRing, transform.position, Quaternion.identity);
+			}
+				
+				
 		}
 			
 	}
