@@ -62,7 +62,7 @@ public class Player : MonoBehaviour {
 				}
 			}
 			else if (holdingBox && (currentRoom != null)) {
-				if ((roomsClaimed.Count < maxRoomClaims) && !currentRoom.isClaimed && currentRoom.isClaimable) {
+				if ((roomsClaimed.Count < maxRoomClaims) && (currentRoom.ownerNum == 0) && currentRoom.isClaimable) {
 					ClaimRoom ();
 				}
 			}
