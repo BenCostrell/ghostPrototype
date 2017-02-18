@@ -8,7 +8,6 @@ public class ObjectGrabber : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -17,13 +16,13 @@ public class ObjectGrabber : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
-		if (collider.gameObject.tag == "Box") {
+		if ((collider.gameObject.tag == "Box") || (collider.gameObject.tag == "HouseObjects")) {
 			objectInRange = collider.gameObject;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
-		if (collider.gameObject.tag == "Box") {
+		if ((collider.gameObject.tag == "Box") || (collider.gameObject.tag == "HouseObjects")) {
 			objectInRange = null;
 		}
 	}

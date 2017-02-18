@@ -8,17 +8,20 @@ public class Player : MonoBehaviour {
 	public float speed;
 	public int playerNum;
 	private List<int> roomsClaimed;
+	private List<GameObject> objectsClaimed;
 	public Room currentRoom;
 	public int maxRoomClaims;
 	public Sprite neutralSprite;
 	public Sprite boxHoldingSprite;
 	private bool holdingBox;
+	private ObjectManager objectManager;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		InitializeLists ();
 		holdingBox = false;
+		objectManager = GameObject.FindGameObjectWithTag ("ObjectManager").GetComponent<ObjectManager>();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +35,7 @@ public class Player : MonoBehaviour {
 
 	void InitializeLists(){
 		roomsClaimed = new List<int> ();
+		objectsClaimed = new List<GameObject> ();
 	}
 
 	void Move(){
@@ -47,8 +51,15 @@ public class Player : MonoBehaviour {
 
 	void ProcessInput(){
 		if (Input.GetButtonDown ("Button1_P" + playerNum)) {
-			if (!holdingBox && (GetComponentInChildren<ObjectGrabber>().objectInRange != null)) {
-				GrabBox ();
+			if (!holdingBox && (GetComponentInChildren<ObjectGrabber>().objectInRange != null) && (roomsClaimed.Count < maxRoomClaims)) {
+				GameObject objInRange = GetComponentInChildren<ObjectGrabber> ().objectInRange;
+				if (objInRange.tag == "Box") {
+					GrabBox (objInRange);
+				} else {
+					if ((objectsClaimed.Count < 3) && (objInRange.GetComponent<ObjectProperties>().ownerNum == 0)) {
+						ClaimObject (objInRange);
+					}
+				}
 			}
 			else if (holdingBox && (currentRoom != null)) {
 				if ((roomsClaimed.Count < maxRoomClaims) && !currentRoom.isClaimed && currentRoom.isClaimable) {
@@ -58,11 +69,15 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void GrabBox(){
-		GameObject box = GetComponentInChildren<ObjectGrabber> ().objectInRange;
+	void GrabBox(GameObject box){
 		holdingBox = true;
 		GetComponent<SpriteRenderer> ().sprite = boxHoldingSprite;
 		Destroy (box);
+	}
+
+	void ClaimObject(GameObject obj){
+		objectsClaimed.Add (obj);
+		objectManager.ClaimObjects (obj.GetComponent<ObjectProperties> ().objectName, playerNum);
 	}
 
 	void ClaimRoom(){

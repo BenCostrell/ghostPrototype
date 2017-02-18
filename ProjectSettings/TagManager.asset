@@ -9,6 +9,7 @@ TagManager:
   - ObjectGrabber
   - Box
   - ClaimableRoomsObj
+  - ObjectManager
   layers:
   - Default
   - TransparentFX

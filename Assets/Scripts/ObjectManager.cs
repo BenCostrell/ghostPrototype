@@ -29,7 +29,7 @@ public class ObjectManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		claimableRooms = GameObject.FindGameObjectWithTag ("ClaimableRoomsObj");
-		InitializeRoomArray ();
+		InitializeArraysAndLists ();
 		AssignObjects ();
 	}
 	
@@ -38,11 +38,17 @@ public class ObjectManager : MonoBehaviour {
 		
 	}
 
-	void InitializeRoomArray(){
+	void InitializeArraysAndLists(){
 		roomArray = claimableRooms.GetComponentsInChildren<Room> ();
 		foreach (Room room in roomArray) {
 			room.numObjectsAssigned = 0;
 		}
+		bookList = new List<GameObject> ();
+		lampList = new List<GameObject> ();
+		laptopList = new List<GameObject> ();
+		paletteList = new List<GameObject> ();
+		synthList = new List<GameObject> ();
+		teddyList = new List<GameObject> ();
 	}
 
 	void AssignObjects(){
@@ -68,7 +74,6 @@ public class ObjectManager : MonoBehaviour {
 	}
 
 	void AssignObjectsOfType(GameObject objectPrefab, List<GameObject> objectList, int numObjects){
-		objectList = new List<GameObject> ();
 		for (int i = 0; i < numObjects; i++) {
 			Room room = GenerateRandomRoom ();
 			bool isValid = ValidateRoom (room);
@@ -86,6 +91,27 @@ public class ObjectManager : MonoBehaviour {
 			GameObject obj = Instantiate (objectPrefab, location, Quaternion.identity) as GameObject;
 			objectList.Add (obj);
 			room.numObjectsAssigned += 1;
+		}
+	}
+
+	public void ClaimObjects(string objectType, int playerNum){
+		List <GameObject> objectsToClaim = new List<GameObject> ();
+		if (objectType == "Book") {
+			objectsToClaim = bookList;
+		} else if (objectType == "Lamp") {
+			objectsToClaim = lampList;
+		} else if (objectType == "Laptop") {
+			objectsToClaim = laptopList;
+		} else if (objectType == "Palette") {
+			objectsToClaim = paletteList;
+		} else if (objectType == "Synth") {
+			objectsToClaim = synthList;
+		} else if (objectType == "Teddy") {
+			objectsToClaim = teddyList;
+		}
+
+		foreach (GameObject obj in objectsToClaim) {
+			obj.GetComponent<ObjectProperties> ().ownerNum = playerNum;
 		}
 	}
 }
