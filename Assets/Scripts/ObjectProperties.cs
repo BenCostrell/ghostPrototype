@@ -15,6 +15,9 @@ public class ObjectProperties : MonoBehaviour {
 
 	public string objectName;
 
+	GameObject objectManager;
+	ObjectManager om;
+
 	SpriteRenderer sr;
 
 
@@ -22,6 +25,8 @@ public class ObjectProperties : MonoBehaviour {
 	void Start () {
 
 		sr = GetComponent<SpriteRenderer> ();
+		objectManager = GameObject.Find ("ObjectManager");
+		om = objectManager.GetComponent<ObjectManager> ();
 
 		
 	}
@@ -41,6 +46,20 @@ public class ObjectProperties : MonoBehaviour {
 		} else {
 			sr.sprite = regular;
 		}
+
+		if (sr.sprite == regular) {
+			if (ownedByBlue == true) {
+				sr.color = om.blueHightLight;
+			} else if (owndedByPink == true) {
+				sr.color = om.pinkHightLight;
+			} else {
+				sr.color = om.white;
+			}
+
+		}
+		else {
+			sr.color = om.white;
+		} 
 
 	}
 }
