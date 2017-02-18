@@ -305,9 +305,9 @@ MonoBehaviour:
   neutral: {fileID: 0}
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
-  isClaimed: 0
   isClaimable: 0
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &258317743
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +405,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: db1bb414395f94c42a49ba050b7972a7, type: 3}
   claimedByP1: {fileID: 21300000, guid: 31a4571e2f419d14a9d27dc74a6bcd7d, type: 3}
   claimedByP2: {fileID: 21300000, guid: ca57f82d70b92274892af994475403eb, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &260877933
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,9 +794,9 @@ MonoBehaviour:
   neutral: {fileID: 0}
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
-  isClaimed: 0
   isClaimable: 0
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &382119603
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,9 +933,9 @@ MonoBehaviour:
   neutral: {fileID: 0}
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
-  isClaimed: 0
   isClaimable: 0
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &453803738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,9 +1033,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: ae3dd6cccd326c74fae1c22040621445, type: 3}
   claimedByP1: {fileID: 21300000, guid: 4fa06e1f50a48bf4591f12f6094d5227, type: 3}
   claimedByP2: {fileID: 21300000, guid: d2c8b04be5afd834e84d4913a305bfdc, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &464708511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,9 +1262,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: a0f45aff21be3834b953529afc67273c, type: 3}
   claimedByP1: {fileID: 21300000, guid: e8fe13b3a240b494ba0921923bcff2b8, type: 3}
   claimedByP2: {fileID: 21300000, guid: eb1b8ce407724354eac69528dddfdff2, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &538987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,9 +1759,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: cccd93afe2180d645b43f70d7b8082d1, type: 3}
   claimedByP1: {fileID: 21300000, guid: 98f813831bababe4f97398dff27a1b55, type: 3}
   claimedByP2: {fileID: 21300000, guid: aa288eeac1cf7034a8d31e0f12ac67e6, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &904757638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,9 +2059,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 5a77fd413f23b9e4a943ba2fc988d1ab, type: 3}
   claimedByP1: {fileID: 21300000, guid: bd53ce47fcd79f94684f0d2ab55d6cf4, type: 3}
   claimedByP2: {fileID: 21300000, guid: 8a9e003a3fddedf4395f7dfe399efef4, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1035376534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,9 +2677,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 9d9d97588a5588941901e2abeefc6ee1, type: 3}
   claimedByP1: {fileID: 21300000, guid: 16221076c22bcdc4ea8985a7453bb452, type: 3}
   claimedByP2: {fileID: 21300000, guid: 15b1eadd73288fe40929c707cb001046, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1379849312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,9 +2891,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 3829cfbfc6fe67d47a1731ef7fb1ed9c, type: 3}
   claimedByP1: {fileID: 21300000, guid: d8405104e5dfc224babb2364b2912b64, type: 3}
   claimedByP2: {fileID: 21300000, guid: bcd6c0096b19f1e408cbd49bd390a3a2, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1478621962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,9 +3009,9 @@ MonoBehaviour:
   neutral: {fileID: 0}
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
-  isClaimed: 0
   isClaimable: 0
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1572051216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,9 +3152,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 61a5a3b7e1325c7489becc4b04c92d4d, type: 3}
   claimedByP1: {fileID: 21300000, guid: 4fda218d9b6ba5b46a57353bf61c53ec, type: 3}
   claimedByP2: {fileID: 21300000, guid: 096f16accdafaf2499d44dfa98e4ecb6, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1621625999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,9 +3440,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: cc6baf62f3e3d6d4ca1076362ed7a357, type: 3}
   claimedByP1: {fileID: 21300000, guid: a0b6f13d79d058f409ec152ff2197c0f, type: 3}
   claimedByP2: {fileID: 21300000, guid: 0645c7b7ab9440847836bd0c0b6c6d2a, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1716268796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,9 +3583,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 31b9b3959c50f3e43a0031fdb56ee796, type: 3}
   claimedByP1: {fileID: 21300000, guid: c83eef85b94c0a44bb676bb7c47ff7d8, type: 3}
   claimedByP2: {fileID: 21300000, guid: 246163d96ee8ddc46b24967ff248750e, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1742042673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3688,9 +3688,9 @@ MonoBehaviour:
   neutral: {fileID: 0}
   claimedByP1: {fileID: 0}
   claimedByP2: {fileID: 0}
-  isClaimed: 0
   isClaimable: 0
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1839672228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,9 +3874,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 7cb4acd01d9cb634a9253fecbdf879ef, type: 3}
   claimedByP1: {fileID: 21300000, guid: 73b2d9e23b17b0143a4d479025bd2c6a, type: 3}
   claimedByP2: {fileID: 21300000, guid: 7ddfc433d62d8384daf931a2d1f86bed, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &1899965275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,9 +4017,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 108031e0f94fa734c9cb004a375d2d07, type: 3}
   claimedByP1: {fileID: 21300000, guid: fe738e9d34e366d47b65c40339bc631a, type: 3}
   claimedByP2: {fileID: 21300000, guid: 024d8dce1ed89c2498c3b3548bac13db, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &2011682871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,9 +4117,9 @@ MonoBehaviour:
   neutral: {fileID: 21300000, guid: 3362bd8378886e1489a81c9a989437cc, type: 3}
   claimedByP1: {fileID: 21300000, guid: 5b4a4a72f3bb7c54f97eafc01bf89737, type: 3}
   claimedByP2: {fileID: 21300000, guid: d5cbec14cd79ad9479660b66e0bdbcba, type: 3}
-  isClaimed: 0
   isClaimable: 1
   numObjectsAssigned: 0
+  ownerNum: 0
 --- !u!1 &2016802401
 GameObject:
   m_ObjectHideFlags: 0

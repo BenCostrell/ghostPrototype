@@ -8,7 +8,6 @@ public class Room : MonoBehaviour {
 	public Sprite neutral;
 	public Sprite claimedByP1;
 	public Sprite claimedByP2;
-	public bool isClaimed;
 	public bool isClaimable;
 	public bool isSpoopyforPink;
 	public bool isSpoopyforBlue;
@@ -16,10 +15,11 @@ public class Room : MonoBehaviour {
 	public int spoopLimit = 10; 
 	public int whoSpooped; 
 	public int numObjectsAssigned;
+	public int ownerNum;
 
 	// Use this for initialization
 	void Start () {
-		
+		ownerNum = 0;
 	}
 	
 	// Update is called once per frame
@@ -30,7 +30,7 @@ public class Room : MonoBehaviour {
 	}
 
 	public void GetClaimed(int playerNum){
-		isClaimed = true;
+		ownerNum = playerNum;
 		if (playerNum == 1) {
 			GetComponent<SpriteRenderer> ().sprite = claimedByP1;
 		} else if (playerNum == 2) {
