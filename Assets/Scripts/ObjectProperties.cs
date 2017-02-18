@@ -98,12 +98,14 @@ public class ObjectProperties : MonoBehaviour {
 				if (ownerNum == 1)
 				{ 
 					possessed = false;
+					rb.velocity = new Vector2 (0,0);
 					Instantiate (blueGhost, transform.position, Quaternion.identity);
 				}
 
 				if (ownerNum == 2) 
 				{
 					possessed = false;
+					rb.velocity = new Vector2 (0,0);
 					Instantiate (pinkGhost, transform.position, Quaternion.identity); 
 				}
 			}

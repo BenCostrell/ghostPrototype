@@ -10,7 +10,6 @@ public class GhostControls : MonoBehaviour {
 	public int playerNum;
 	public GameObject objectInRange; 
 	ObjectProperties op; 
-	ObjectProperties op2;
 
 	// Use this for initialization
 	void Start () {
@@ -75,12 +74,12 @@ public class GhostControls : MonoBehaviour {
 	{
 		if (objectInRange != null) 
 		{
-			op2 = objectInRange.GetComponent<ObjectProperties> ();
+			op = objectInRange.GetComponent<ObjectProperties> ();
 		} 
 
-		if (Input.GetButtonDown ("Button1_P" + playerNum)) 
+		if (Input.GetButtonDown ("Button1_P" + playerNum) && objectInRange != null) 
 		{ 
-			op2.possessed = true;
+			op.possessed = true;
 			Destroy (this.gameObject);
 			Debug.Log ("This is working?");
 		}
