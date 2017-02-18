@@ -9,6 +9,7 @@ public class Room : MonoBehaviour {
 	public Sprite claimedByP1;
 	public Sprite claimedByP2;
 	public bool isClaimed;
+	public bool isClaimable;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class Room : MonoBehaviour {
 	}
 
 	public void GetClaimed(int playerNum){
+		isClaimed = true;
 		if (playerNum == 1) {
 			GetComponent<SpriteRenderer> ().sprite = claimedByP1;
 		} else if (playerNum == 2) {

@@ -31,6 +31,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1828335219689922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4559155764605706}
+  - component: {fileID: 58186557928636900}
+  - component: {fileID: 114230579612491790}
+  m_Layer: 9
+  m_Name: ObjectGrabbingCollider
+  m_TagString: ObjectGrabber
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4116503240089532
 Transform:
   m_ObjectHideFlags: 1
@@ -38,10 +55,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197519420561584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.71, y: -0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4559155764605706}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4559155764605706
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828335219689922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 4116503240089532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50795352051739582
@@ -64,6 +95,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58186557928636900
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828335219689922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2939763
 --- !u!58 &58253803316400048
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -91,7 +136,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.08938491
+  m_Radius: 0.06558514
+--- !u!114 &114230579612491790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1828335219689922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11474649c6438ef44953e150909be788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114317810552148476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +161,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   playerNum: 1
-  maxRoomClaims: 3
+  currentRoom: {fileID: 0}
+  maxRoomClaims: 6
+  neutralSprite: {fileID: 0}
+  boxHoldingSprite: {fileID: 0}
 --- !u!212 &212581998019612168
 SpriteRenderer:
   m_ObjectHideFlags: 1

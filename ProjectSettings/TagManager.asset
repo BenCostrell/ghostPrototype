@@ -6,6 +6,8 @@ TagManager:
   tags:
   - HouseObjects
   - Room
+  - ObjectGrabber
+  - Box
   layers:
   - Default
   - TransparentFX

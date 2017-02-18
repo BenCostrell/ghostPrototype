@@ -8,15 +8,17 @@ public class Player : MonoBehaviour {
 	public float speed;
 	public int playerNum;
 	private List<int> roomsClaimed;
-	private Room currentRoom;
+	public Room currentRoom;
 	public int maxRoomClaims;
 	public Sprite neutralSprite;
 	public Sprite boxHoldingSprite;
+	private bool holdingBox;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		InitializeLists ();
+		holdingBox = false;
 	}
 	
 	// Update is called once per frame
@@ -45,21 +47,34 @@ public class Player : MonoBehaviour {
 
 	void ProcessInput(){
 		if (Input.GetButtonDown ("Button1_P" + playerNum)) {
-			ClaimRoom ();
+			if (!holdingBox && (GetComponentInChildren<ObjectGrabber>().objectInRange != null)) {
+				GrabBox ();
+			}
+			else if (holdingBox && (currentRoom != null)) {
+				if ((roomsClaimed.Count < maxRoomClaims) && !currentRoom.isClaimed && currentRoom.isClaimable) {
+					ClaimRoom ();
+				}
+			}
 		}
-	
+	}
+
+	void GrabBox(){
+		GameObject box = GetComponentInChildren<ObjectGrabber> ().objectInRange;
+		holdingBox = true;
+		GetComponent<SpriteRenderer> ().sprite = boxHoldingSprite;
+		Destroy (box);
 	}
 
 	void ClaimRoom(){
-		if ((roomsClaimed.Count < maxRoomClaims) && !currentRoom.isClaimed) {
-			roomsClaimed.Add (currentRoom.id);
-			currentRoom.GetClaimed (playerNum);
-		}
+		holdingBox = false;
+		GetComponent<SpriteRenderer> ().sprite = neutralSprite;
+		roomsClaimed.Add (currentRoom.id);
+		currentRoom.GetClaimed (playerNum);
 	}
 
-	void OnTriggerStay2D(Collider2D collider){
+	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.gameObject.tag == "Room") {
 			currentRoom = collider.gameObject.GetComponent<Room> ();
-		}
+		} 
 	}
 }
