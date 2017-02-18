@@ -49,12 +49,14 @@ public class GhostControls : MonoBehaviour {
 		if (coll.gameObject.tag == "HouseObjects") 
 		{
 			op = coll.GetComponent<ObjectProperties> ();
+
+			if (op.ownerNum == playerNum && objectInRange == null && coll.gameObject.tag == "HouseObjects") 
+			{
+				objectInRange = coll.gameObject;  
+			}
 		}
 
-		if (op.ownerNum == playerNum && objectInRange == null && coll.gameObject.tag == "HouseObjects") 
-		{
-			objectInRange = coll.gameObject;  
-		}
+
 	}
 
 	void OnTriggerExit2D (Collider2D coll)
