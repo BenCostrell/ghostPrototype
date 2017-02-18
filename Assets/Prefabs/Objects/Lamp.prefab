@@ -88,14 +88,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1751a15e803d1498db14643dcdc2861f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownedByBlue: 0
-  owndedByPink: 0
-  possessedByBlue: 0
-  possessedByPink: 0
+  ownerNum: 2
+  possessed: 0
   regular: {fileID: 21300004, guid: b4f5b84cc09b3ca4dae9e1d8250fc4d9, type: 3}
   blue: {fileID: 21300002, guid: b4f5b84cc09b3ca4dae9e1d8250fc4d9, type: 3}
   pink: {fileID: 21300000, guid: b4f5b84cc09b3ca4dae9e1d8250fc4d9, type: 3}
+  blueGhost: {fileID: 1865573396964230, guid: d2b11a67d3a2b496abbd04d3b6beb9da, type: 2}
+  pinkGhost: {fileID: 1407956115763192, guid: 7ba26fe27b1dd44dfbc8e623b197500c, type: 2}
   objectName: Lamp
+  speed: 2
 --- !u!212 &212371696629725988
 SpriteRenderer:
   m_ObjectHideFlags: 1
