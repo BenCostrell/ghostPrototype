@@ -81,7 +81,6 @@ public class GhostControls : MonoBehaviour {
 		{ 
 			op.possessed = true;
 			Destroy (this.gameObject);
-			Debug.Log ("This is working?");
 		}
 	}
 		
