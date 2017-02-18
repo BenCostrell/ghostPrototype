@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114761164954925696}
   - component: {fileID: 61983953570278444}
   - component: {fileID: 50158925796406272}
+  - component: {fileID: 95971074541039698}
   m_Layer: 0
   m_Name: Laptop
   m_TagString: HouseObjects
@@ -77,6 +78,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.64}
+--- !u!95 &95971074541039698
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426236603950828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114761164954925696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +113,7 @@ MonoBehaviour:
   pink: {fileID: 21300000, guid: 52cf12addc27f7d41843341b5c3b5a48, type: 3}
   blueGhost: {fileID: 1865573396964230, guid: d2b11a67d3a2b496abbd04d3b6beb9da, type: 2}
   pinkGhost: {fileID: 1407956115763192, guid: 7ba26fe27b1dd44dfbc8e623b197500c, type: 2}
+  spoopRing: {fileID: 1036099746096676, guid: dc3a9730eb46b4f3e8673aeac31c1a57, type: 2}
   objectName: Laptop
   speed: 2
 --- !u!212 &212907540496080076

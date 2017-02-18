@@ -51,7 +51,7 @@ public class GhostControls : MonoBehaviour {
 			op = coll.GetComponent<ObjectProperties> ();
 		}
 
-		if (op.ownerNum == playerNum && objectInRange == null) 
+		if (op.ownerNum == playerNum && objectInRange == null && coll.gameObject.tag == "HouseObjects") 
 		{
 			objectInRange = coll.gameObject;  
 		}
@@ -62,12 +62,14 @@ public class GhostControls : MonoBehaviour {
 		if (coll.gameObject.tag == "HouseObjects") 
 		{
 			op = coll.GetComponent<ObjectProperties> ();
+
+			if (op.ownerNum == playerNum) 
+			{
+				objectInRange = null;
+			}
 		}
 
-		if (op.ownerNum == playerNum) 
-		{
-			objectInRange = null;
-		}
+	
 	}
 
 	void possessObject ()
