@@ -55,6 +55,16 @@ MonoBehaviour:
   blueHightLight: {r: 0.36764705, g: 1, b: 1, a: 1}
   pinkHightLight: {r: 1, g: 0.53676474, b: 0.8913793, a: 1}
   white: {r: 1, g: 1, b: 1, a: 1}
+  bookPrefab: {fileID: 1413158330139586, guid: 577de4e1d7bf44bbda8ef42541a65b3b, type: 2}
+  lampPrefab: {fileID: 1847533317609628, guid: 648cd456835784fd1975260bebc58af6, type: 2}
+  laptopPrefab: {fileID: 1426236603950828, guid: 1465f21325ba744ba97259345ca17dc5,
+    type: 2}
+  palettePrefab: {fileID: 1848808110844674, guid: da7ebc7eb62244221828ad7b62e73233,
+    type: 2}
+  synthPrefab: {fileID: 1759001003586550, guid: af8b468093f3148d5bd1f0b2529dcf85,
+    type: 2}
+  teddyPrefab: {fileID: 1148162856303718, guid: 780b4383fc9464bfdba19bd4f0716b61,
+    type: 2}
 --- !u!212 &212255950384628870
 SpriteRenderer:
   m_ObjectHideFlags: 1

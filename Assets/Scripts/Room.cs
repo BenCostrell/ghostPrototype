@@ -10,6 +10,7 @@ public class Room : MonoBehaviour {
 	public Sprite claimedByP2;
 	public bool isClaimed;
 	public bool isClaimable;
+	public int numObjectsAssigned;
 
 	// Use this for initialization
 	void Start () {
