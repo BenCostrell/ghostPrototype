@@ -8,9 +8,9 @@ public class GhostControls : MonoBehaviour {
 	private SpriteRenderer sr;
 	public float speed;
 	public int playerNum;
+	public GameObject objectInRange; 
 	ObjectProperties op; 
-
-	public bool inRange;
+	ObjectProperties op2;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +20,8 @@ public class GhostControls : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		possessObject ();
 
 	}
 
@@ -50,9 +52,37 @@ public class GhostControls : MonoBehaviour {
 			op = coll.GetComponent<ObjectProperties> ();
 		}
 
+		if (op.ownerNum == playerNum && objectInRange == null) 
+		{
+			objectInRange = coll.gameObject;  
+		}
+	}
+
+	void OnTriggerExit2D (Collider2D coll)
+	{
+		if (coll.gameObject.tag == "HouseObjects") 
+		{
+			op = coll.GetComponent<ObjectProperties> ();
+		}
+
 		if (op.ownerNum == playerNum) 
 		{
-			inRange = true;
+			objectInRange = null;
+		}
+	}
+
+	void possessObject ()
+	{
+		if (objectInRange != null) 
+		{
+			op2 = objectInRange.GetComponent<ObjectProperties> ();
+		} 
+
+		if (Input.GetButtonDown ("Button1_P" + playerNum)) 
+		{ 
+			op2.possessed = true;
+			Destroy (this.gameObject);
+			Debug.Log ("This is working?");
 		}
 	}
 		
