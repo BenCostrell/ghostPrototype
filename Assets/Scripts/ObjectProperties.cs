@@ -31,6 +31,8 @@ public class ObjectProperties : MonoBehaviour {
 		objectManager = GameObject.Find ("ObjectManager");
 		om = objectManager.GetComponent<ObjectManager> ();
 		rb = GetComponent<Rigidbody2D> ();
+		ownerNum = 0;
+		possessed = false;
 	}
 	
 	// Update is called once per frame
