@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11474649c6438ef44953e150909be788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectInRange: {fileID: 0}
 --- !u!114 &114317810552148476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986a0853f73c5424ab1bd09eabc15a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   playerNum: 1
   currentRoom: {fileID: 0}
   maxRoomClaims: 6
