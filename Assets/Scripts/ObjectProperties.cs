@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ObjectProperties : MonoBehaviour {
 
-	public bool ownedByBlue;
-	public bool owndedByPink;
+	public int ownerNum;
 	public bool possessedByBlue;
 	public bool possessedByPink;
 
@@ -48,9 +47,9 @@ public class ObjectProperties : MonoBehaviour {
 		}
 
 		if (sr.sprite == regular) {
-			if (ownedByBlue == true) {
+			if (ownerNum == 1) {
 				sr.color = om.blueHightLight;
-			} else if (owndedByPink == true) {
+			} else if (ownerNum == 2) {
 				sr.color = om.pinkHightLight;
 			} else {
 				sr.color = om.white;

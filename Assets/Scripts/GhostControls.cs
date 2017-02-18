@@ -8,6 +8,9 @@ public class GhostControls : MonoBehaviour {
 	private SpriteRenderer sr;
 	public float speed;
 	public int playerNum;
+	ObjectProperties op; 
+
+	public bool inRange;
 
 	// Use this for initialization
 	void Start () {
@@ -29,10 +32,28 @@ public class GhostControls : MonoBehaviour {
 
 		rb.velocity = speed * direction;
 
-		if (direction.x >= 0) {
+		if (direction.x > 0) 
+		{
 			sr.flipX = true;
-		} else {
+		} 
+
+		if (direction.x < 0) 
+		{
 			sr.flipX = false;
 		}
 	}
+
+	void OnTriggerEnter2D (Collider2D coll)
+	{
+		if (coll.gameObject.tag == "HouseObjects") 
+		{
+			op = coll.GetComponent<ObjectProperties> ();
+		}
+
+		if (op.ownerNum == playerNum) 
+		{
+			inRange = true;
+		}
+	}
+		
 }
