@@ -123,14 +123,6 @@ public class ObjectProperties : MonoBehaviour {
 
 		}
 	}
-		
-	void OnTriggerEnter2D(Collider2D collider)
-	{ 
-		if (collider.gameObject.tag == "Room") 
-		{
-			currentRoom = collider.gameObject.GetComponent<Room> (); 
-		} 
-	}
 
 	void getSpooped () 
 	{
