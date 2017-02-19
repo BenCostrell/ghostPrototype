@@ -52,11 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947f899296f2f4b46a7aa75ad2827d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueDark: {r: 0.17128026, g: 0.24422197, b: 0.72794116, a: 1}
-  blueBright: {r: 0.16955015, g: 0.6521835, b: 0.7205882, a: 1}
+  blueDark: {r: 0.11061852, g: 0.15585995, b: 0.45588237, a: 1}
+  blueBright: {r: 0.11724138, g: 0, b: 1, a: 1}
   blueLerp: {r: 0, g: 0, b: 0, a: 1}
   pinkDark: {r: 0.6397059, g: 0.18344505, b: 0.60823965, a: 1}
-  pinkBright: {r: 1, g: 0.25735295, b: 0.9180526, a: 1}
+  pinkBright: {r: 1, g: 0, b: 0.8896551, a: 1}
   pinkLerp: {r: 0, g: 0, b: 0, a: 1}
   white: {r: 1, g: 1, b: 1, a: 1}
   lerpSpeed: 10
