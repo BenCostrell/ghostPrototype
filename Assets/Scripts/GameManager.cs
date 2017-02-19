@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject playerPrefab;
 	public GameObject boxPrefab;
+	public float boxSpawnX;
+	public float boxSpawnLowestY;
+	public float boxSpawnSpacing;
 	public Vector3 spawnP1;
 	public Vector3 spawnP2;
 	public Sprite neutralSpriteP1;
@@ -59,9 +62,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void InitializeBoxes(){
-		for (int i = 0; i < 6; i++) {
-			Instantiate (boxPrefab, new Vector3 (6.5f, -1f + i * 0.6f, 0), Quaternion.identity);
-			Instantiate (boxPrefab, new Vector3 (7f, -1f + i * 0.6f, 0), Quaternion.identity);
+		for (int i = 0; i < 12; i++) {
+			Instantiate (boxPrefab, new Vector3 (boxSpawnX, boxSpawnLowestY + i * boxSpawnSpacing, 0), Quaternion.identity);
 		}
 	}
 

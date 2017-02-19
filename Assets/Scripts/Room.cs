@@ -18,6 +18,7 @@ public class Room : MonoBehaviour {
 	public int ownerNum;
 	public float fillProportion;
 	public float fillRate;
+	public Sprite tweet;
 
 	public Color blueDark; 
 	public Color blueBright; 
