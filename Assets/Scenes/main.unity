@@ -852,6 +852,9 @@ MonoBehaviour:
     type: 2}
   ghostPrefabP2: {fileID: 1407956115763192, guid: 7ba26fe27b1dd44dfbc8e623b197500c,
     type: 2}
+  murderBabyFanPrefab: {fileID: 1918176703549072, guid: 9355bc635d379844d9110468553999d0,
+    type: 2}
+  murderBabyFanSpawn: {x: -1, y: 0, z: 0}
 --- !u!4 &382119605
 Transform:
   m_ObjectHideFlags: 0

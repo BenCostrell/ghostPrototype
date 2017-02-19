@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour {
 	private GameObject player2;
 	public GameObject ghostPrefabP1;
 	public GameObject ghostPrefabP2;
-	private GameObject murderBabyFan;
+	public GameObject murderBabyFanPrefab;
+	public Vector3 murderBabyFanSpawn;
 	private bool player1Ready;
 	private bool player2Ready;
 	private bool ghostPhase;
@@ -76,10 +77,15 @@ public class GameManager : MonoBehaviour {
 		Destroy (player1);
 		Destroy (player2);
 		InitializeGhosts ();
+		InitializeMurderBabyFan ();
 	}
 
 	void InitializeGhosts(){
 		Instantiate (ghostPrefabP1, spawnP1, Quaternion.identity);
 		Instantiate (ghostPrefabP2, spawnP2, Quaternion.identity);
+	}
+
+	void InitializeMurderBabyFan(){
+		Instantiate (murderBabyFanPrefab, murderBabyFanSpawn, Quaternion.identity);
 	}
 }

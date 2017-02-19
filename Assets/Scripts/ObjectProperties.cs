@@ -126,18 +126,18 @@ public class ObjectProperties : MonoBehaviour {
 
 	void getSpooped () 
 	{
-		if (currentRoom.isSpoopyforBlue == true && ownerNum == 1 && possessed == true)
-		{ 
-			possessed = false;
-			rb.velocity = new Vector2 (0,0);
-			Instantiate (blueGhost, transform.position, Quaternion.identity);
-		}
+		if (currentRoom != null) {
+			if (currentRoom.isSpoopyforBlue == true && ownerNum == 1 && possessed == true) { 
+				possessed = false;
+				rb.velocity = new Vector2 (0, 0);
+				Instantiate (blueGhost, transform.position, Quaternion.identity);
+			}
 
-		if (currentRoom.isSpoopyforPink && ownerNum == 2 && possessed == true) 
-		{
-			possessed = false;
-			rb.velocity = new Vector2 (0,0);
-			Instantiate (pinkGhost, transform.position, Quaternion.identity); 
+			if (currentRoom.isSpoopyforPink && ownerNum == 2 && possessed == true) {
+				possessed = false;
+				rb.velocity = new Vector2 (0, 0);
+				Instantiate (pinkGhost, transform.position, Quaternion.identity); 
+			}
 		}
 	}
 		

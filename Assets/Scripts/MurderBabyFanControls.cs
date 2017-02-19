@@ -10,6 +10,10 @@ public class MurderBabyFanControls : MonoBehaviour {
 	public Sprite neutral;
 	public Sprite posP1;
 	public Sprite posP2;
+	public GameObject ghostP1;
+	public GameObject ghostP2;
+	public float launchSpeed;
+	public float launchStun;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +22,7 @@ public class MurderBabyFanControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		ProcessInput ();
 	}
 
 	void FixedUpdate(){
@@ -38,6 +42,12 @@ public class MurderBabyFanControls : MonoBehaviour {
 		} 
 	}
 
+	void ProcessInput(){
+		if (Input.GetButtonDown ("Button1_P" + ownerNum)) {
+			UnPossess (false);
+		}
+	}
+
 	public void SetPossessionStatus(int playerNum){
 		ownerNum = playerNum;
 		if (playerNum == 0) {
@@ -46,6 +56,25 @@ public class MurderBabyFanControls : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().sprite = posP1;
 		} else if (playerNum == 2) {
 			GetComponent<SpriteRenderer> ().sprite = posP2;
+		}
+	}
+
+	public void UnPossess(bool withStun){
+		if (ownerNum != 0) {
+			GameObject ghost = null;
+			if (ownerNum == 1) {
+				ghost = Instantiate (ghostP1, transform.position, Quaternion.identity) as GameObject;
+			} else if (ownerNum == 2) {
+				ghost = Instantiate (ghostP2, transform.position, Quaternion.identity) as GameObject;
+			}
+			if (withStun) {
+				float xLaunch = Random.Range (-1, 1);
+				float yLaunch = Random.Range (-1, 1);
+				Vector3 launchDirection = new Vector3 (xLaunch, yLaunch, 0);
+				ghost.GetComponent<Rigidbody2D> ().velocity = launchDirection.normalized * launchSpeed;
+				ghost.GetComponent<GhostControls> ().hitstunRemaining = launchStun;
+			}
+			SetPossessionStatus (0);
 		}
 	}
 }

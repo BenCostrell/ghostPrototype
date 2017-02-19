@@ -10,22 +10,29 @@ public class GhostControls : MonoBehaviour {
 	public int playerNum;
 	public GameObject objectInRange; 
 	ObjectProperties op; 
+	private bool playerInRange;
+	public float hitstunRemaining;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		sr = GetComponent<SpriteRenderer> ();
+		playerInRange = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		possessObject ();
-
+		if (hitstunRemaining > 0) {
+			hitstunRemaining -= Time.deltaTime;
+		} else {
+			ProcessInput ();
+		}
 	}
 
 	void FixedUpdate(){
-		Move ();
+		if (hitstunRemaining <= 0) {
+			Move ();
+		}
 	}
 
 	void Move(){
@@ -55,6 +62,9 @@ public class GhostControls : MonoBehaviour {
 				objectInRange = coll.gameObject;  
 			}
 		}
+		if (coll.gameObject.tag == "MurderBabyFan") {
+			playerInRange = true;
+		}
 
 
 	}
@@ -70,21 +80,36 @@ public class GhostControls : MonoBehaviour {
 				objectInRange = null;
 			}
 		}
+		if (coll.gameObject.tag == "MurderBabyFan") {
+			playerInRange = false;
+		}
 
 	
 	}
 
-	void possessObject ()
-	{
-		if (objectInRange != null) 
-		{
-			op = objectInRange.GetComponent<ObjectProperties> ();
-		} 
+	void ProcessInput(){
+		if (Input.GetButtonDown ("Button1_P" + playerNum)) {
+			if (playerInRange) {
+				PossessPlayer ();
+			}
+			else if (objectInRange != null) {
+				PossessObject ();
+			}
+		}
+	}
 
-		if (Input.GetButtonDown ("Button1_P" + playerNum) && objectInRange != null) 
-		{ 
-			op.possessed = true;
-			Destroy (this.gameObject);
+	void PossessObject ()
+	{
+		op = objectInRange.GetComponent<ObjectProperties> ();
+		op.possessed = true;
+		Destroy (gameObject);
+	}
+
+	void PossessPlayer(){
+		MurderBabyFanControls murderBabyFan = GameObject.FindGameObjectWithTag ("MurderBabyFan").GetComponent<MurderBabyFanControls> ();
+		if (murderBabyFan.ownerNum == 0) {
+			murderBabyFan.SetPossessionStatus (playerNum);
+			Destroy (gameObject);
 		}
 	}
 		

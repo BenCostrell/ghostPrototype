@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 58799792458808520}
   m_Layer: 0
   m_Name: MurderBabyFan
-  m_TagString: Untagged
+  m_TagString: MurderBabyFan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2d328659ac84d71ac6b2ce6292eb5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerNum: 0
+  speed: 2.5
+  neutral: {fileID: 21300000, guid: a0e72f74bbcfe384ca882cabe16c976a, type: 3}
+  posP1: {fileID: 21300002, guid: a0e72f74bbcfe384ca882cabe16c976a, type: 3}
+  posP2: {fileID: 21300004, guid: a0e72f74bbcfe384ca882cabe16c976a, type: 3}
+  ghostP1: {fileID: 1865573396964230, guid: d2b11a67d3a2b496abbd04d3b6beb9da, type: 2}
+  ghostP2: {fileID: 1407956115763192, guid: 7ba26fe27b1dd44dfbc8e623b197500c, type: 2}
+  launchSpeed: 1
+  launchStun: 1
 --- !u!212 &212132845741648130
 SpriteRenderer:
   m_ObjectHideFlags: 1
