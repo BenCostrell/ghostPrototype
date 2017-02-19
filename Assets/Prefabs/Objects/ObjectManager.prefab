@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueHightLight: {r: 0.36764705, g: 1, b: 1, a: 1}
   pinkHightLight: {r: 1, g: 0.53676474, b: 0.8913793, a: 1}
+  used: {r: 1, g: 1, b: 1, a: 0.516}
   white: {r: 1, g: 1, b: 1, a: 1}
   bookPrefab: {fileID: 1413158330139586, guid: 577de4e1d7bf44bbda8ef42541a65b3b, type: 2}
   lampPrefab: {fileID: 1847533317609628, guid: 648cd456835784fd1975260bebc58af6, type: 2}
