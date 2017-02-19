@@ -11,6 +11,7 @@ public class Room : MonoBehaviour {
 	public bool isClaimable;
 	public bool isSpoopyforPink;
 	public bool isSpoopyforBlue; 
+	public bool isEmpty = true;
 	public int spoopTimer; 
 	public int spoopLimit = 10; 
 	public int whoSpooped; 
@@ -41,6 +42,7 @@ public class Room : MonoBehaviour {
 	void Update () { 
 
 		spoopEnder ();
+		stopFlash ();
 		
 	}
 
@@ -83,6 +85,7 @@ public class Room : MonoBehaviour {
 
 	public void IncrementFillProportion(){
 		fillProportion += fillRate;
+		isEmpty = false;
 		if (ownerNum == 1) 
 		{
 			sr.color = rcm.blueLerp;
@@ -107,12 +110,20 @@ public class Room : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag == "MurderBabyFan") 
+		if (isClaimable && coll.gameObject.tag == "MurderBabyFan") 
 		{
 			if (fillProportion < 1) 
 			{
-				sr.color = rcm.white;
+				isEmpty = true;
 			}
+		}
+	}
+
+	void stopFlash ()
+	{
+		if (isEmpty && isClaimable)
+		{
+			sr.color = rcm.white;
 		}
 	}
 }
