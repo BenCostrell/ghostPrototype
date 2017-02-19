@@ -6,6 +6,7 @@ public class ObjectProperties : MonoBehaviour {
 
 	public int ownerNum;
 	public bool possessed;
+	public bool onCoolDown;
 
 	public Sprite regular;
 	public Sprite blue;
@@ -14,6 +15,8 @@ public class ObjectProperties : MonoBehaviour {
 	public GameObject pinkGhost;
 	public GameObject spoopRing;
 	public Room currentRoom;
+	public int coolDownTimer = 0;
+	public int coolDownLimit = 100;
 
 	public string objectName;
 
@@ -42,6 +45,7 @@ public class ObjectProperties : MonoBehaviour {
 		determineSprite ();
 		possessedControls ();
 		getSpooped ();
+		coolDownRefresh ();
 		
 	}
 
@@ -63,7 +67,7 @@ public class ObjectProperties : MonoBehaviour {
 			sr.sprite = regular; 
 		}
 
-		if (sr.sprite == regular) {
+		if (sr.sprite == regular && onCoolDown == false) {
 			if (ownerNum == 1) {
 				sr.color = om.blueHightLight;
 			} else if (ownerNum == 2) {
@@ -77,6 +81,11 @@ public class ObjectProperties : MonoBehaviour {
 		{
 			sr.color = om.white;
 		} 
+
+		if (onCoolDown == true) 
+		{
+			sr.color = om.used;
+		}
 
 	}
 
@@ -115,10 +124,11 @@ public class ObjectProperties : MonoBehaviour {
 				}
 			}
 
-			if (Input.GetButtonDown ("Button2_P" + ownerNum)) 
+			if (Input.GetButtonDown ("Button2_P" + ownerNum) && onCoolDown == false) 
 			{
 				Instantiate (spoopRing, transform.position, Quaternion.identity);
 				currentRoom.getSpoopy (ownerNum);
+				onCoolDown = true;
 			}
 
 		}
@@ -139,6 +149,21 @@ public class ObjectProperties : MonoBehaviour {
 				Instantiate (pinkGhost, transform.position, Quaternion.identity); 
 			}
 		}
+	}
+
+	void coolDownRefresh ()
+	{
+		if (onCoolDown == true) 
+		{
+			coolDownTimer++;
+		}
+
+		if (coolDownTimer >= coolDownLimit) 
+		{
+			coolDownTimer = 0;
+			onCoolDown = false; 
+		}
+
 	}
 		
 }

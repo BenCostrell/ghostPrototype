@@ -6,6 +6,7 @@ public class ObjectManager : MonoBehaviour {
 
 	public Color blueHightLight; 
 	public Color pinkHightLight;
+	public Color used; 
 	public Color white;
 
 	public GameObject bookPrefab;
