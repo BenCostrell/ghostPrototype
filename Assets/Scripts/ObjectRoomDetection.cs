@@ -7,10 +7,9 @@ public class ObjectRoomDetection : MonoBehaviour {
 	ObjectProperties op;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		op = GetComponentInParent <ObjectProperties> ();
-		
 	}
 	
 	// Update is called once per frame
