@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4504658430877944}
   - component: {fileID: 212635092052950008}
   - component: {fileID: 58805224756054236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114904010768164804}
   - component: {fileID: 61800547804335928}
   - component: {fileID: 50144490828130826}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Teddy
   m_TagString: HouseObjects
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 212909153486444506}
   - component: {fileID: 58291803733588026}
   - component: {fileID: 114303201283796034}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoomDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
