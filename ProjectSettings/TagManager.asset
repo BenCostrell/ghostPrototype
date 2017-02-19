@@ -12,6 +12,7 @@ TagManager:
   - ObjectManager
   - GameManager
   - MurderBabyFan
+  - TweetManager
   layers:
   - Default
   - TransparentFX

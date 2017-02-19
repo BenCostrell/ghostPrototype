@@ -22,6 +22,7 @@ public class Room : MonoBehaviour {
 	SpriteRenderer sr;
 	GameObject colorManager;
 	RoomColorManager rcm;
+	private TweetManager tweetManager;
 
 
 
@@ -33,6 +34,7 @@ public class Room : MonoBehaviour {
 
 		colorManager = GameObject.Find ("RoomColorManager");
 		rcm = colorManager.GetComponent<RoomColorManager> ();
+		tweetManager = GameObject.FindGameObjectWithTag ("TweetManager").GetComponent<TweetManager>();
 	}
 	
 	// Update is called once per frame
@@ -99,6 +101,7 @@ public class Room : MonoBehaviour {
 			{
 				sr.color = rcm.pinkBright;
 			}
+			tweetManager.Tweet (tweet);
 		}
 	}
 
