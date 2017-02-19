@@ -19,6 +19,13 @@ public class Room : MonoBehaviour {
 	public float fillProportion;
 	public float fillRate;
 
+	public Color blueDark; 
+	public Color blueBright; 
+	public Color blueLerp; 
+	public Color pinkDark; 
+	public Color pinkBright;
+	public Color pinkLerp; 
+
 	// Use this for initialization
 	void Start () {
 		ownerNum = 0;
@@ -75,4 +82,6 @@ public class Room : MonoBehaviour {
 			Debug.Log ("finished claiming for player " + ownerNum);
 		}
 	}
+
+
 }

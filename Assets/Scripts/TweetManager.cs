@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class TweetManager : MonoBehaviour {
 
-	public Vector2 tweetField1;
-	public Vector2 tweetField2;
-	public Vector2 tweetField3;
-	public Vector2 tweetField4;
+	public Sprite redTweet;
+	public Sprite blueTweet;
+	public Sprite greenTweet;
+	public Sprite yellowTweet;
+
+	public GameObject tweetField1;
+	public GameObject tweetField2;
+	public GameObject tweetField3;
+	public GameObject tweetField4; 
+
+	public KeyCode red;
+	public KeyCode green;
+	public KeyCode blue;
+	public KeyCode yellow;
 
 	// Use this for initialization
 	void Start () {
+
 		
 	}
 	
