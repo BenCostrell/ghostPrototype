@@ -27,6 +27,7 @@ public class MurderBabyFanControls : MonoBehaviour {
 			ProcessInput ();
 			CheckForSpoop ();
 		}
+		CheckForFill ();
 	}
 
 	void FixedUpdate(){
@@ -80,6 +81,7 @@ public class MurderBabyFanControls : MonoBehaviour {
 			} else {
 				ghost.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
 			}
+			rb.velocity = Vector3.zero;
 			SetPossessionStatus (0);
 		}
 	}
@@ -87,6 +89,14 @@ public class MurderBabyFanControls : MonoBehaviour {
 	void CheckForSpoop(){
 		if ((currentRoom.isSpoopyforBlue && (ownerNum == 1)) || (currentRoom.isSpoopyforPink && (ownerNum == 2))){
 			UnPossess (true);
+		}
+	}
+
+	void CheckForFill(){
+		if (currentRoom != null) {
+			if ((currentRoom.ownerNum == ownerNum) && (currentRoom.fillProportion < 1)){
+				currentRoom.IncrementFillProportion ();
+			}
 		}
 	}
 

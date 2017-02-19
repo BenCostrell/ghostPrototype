@@ -16,10 +16,13 @@ public class Room : MonoBehaviour {
 	public int whoSpooped; 
 	public int numObjectsAssigned;
 	public int ownerNum;
+	public float fillProportion;
+	public float fillRate;
 
 	// Use this for initialization
 	void Start () {
 		ownerNum = 0;
+		fillProportion = 0;
 	}
 	
 	// Update is called once per frame
@@ -64,5 +67,12 @@ public class Room : MonoBehaviour {
 			isSpoopyforPink = false; 
 		}
 		
+	}
+
+	public void IncrementFillProportion(){
+		fillProportion += fillRate;
+		if (fillProportion >= 1) {
+			Debug.Log ("finished claiming for player " + ownerNum);
+		}
 	}
 }

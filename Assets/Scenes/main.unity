@@ -313,6 +313,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0
 --- !u!1 &258317743
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +420,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &260877933
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,6 +816,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0
 --- !u!1 &382119603
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +969,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0
 --- !u!1 &453803738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1076,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &464708511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1312,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &538987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1816,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &904757638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,6 +2123,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1035376534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,6 +2748,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1379849312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +2969,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1478621962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,6 +3094,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0
 --- !u!1 &1572051216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3244,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1621625999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3539,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1716268796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,6 +3689,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1742042673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,6 +3801,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0
 --- !u!1 &1839672228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +3994,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &1899965275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,6 +4144,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &2011682871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4251,8 @@ MonoBehaviour:
   whoSpooped: 0
   numObjectsAssigned: 0
   ownerNum: 0
+  fillProportion: 0
+  fillRate: 0.01
 --- !u!1 &2016802401
 GameObject:
   m_ObjectHideFlags: 0
