@@ -19,22 +19,24 @@ public class Room : MonoBehaviour {
 	public float fillProportion;
 	public float fillRate;
 	public Sprite tweet;
+	SpriteRenderer sr;
+	GameObject colorManager;
+	RoomColorManager rcm;
 
-	public Color blueDark; 
-	public Color blueBright; 
-	public Color blueLerp; 
-	public Color pinkDark; 
-	public Color pinkBright;
-	public Color pinkLerp; 
+
 
 	// Use this for initialization
 	void Start () {
 		ownerNum = 0;
 		fillProportion = 0;
+		sr = GetComponent<SpriteRenderer> ();
+
+		colorManager = GameObject.Find ("RoomColorManager");
+		rcm = colorManager.GetComponent<RoomColorManager> ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () { 
 
 		spoopEnder ();
 		
@@ -79,8 +81,24 @@ public class Room : MonoBehaviour {
 
 	public void IncrementFillProportion(){
 		fillProportion += fillRate;
+		if (ownerNum == 1) 
+		{
+			sr.color = rcm.blueLerp;
+		}
+		if (ownerNum == 2) 
+		{
+			sr.color = rcm.pinkLerp;
+		}
 		if (fillProportion >= 1) {
 			Debug.Log ("finished claiming for player " + ownerNum);
+			if (ownerNum == 1) 
+			{
+				sr.color = rcm.blueBright;
+			}
+			if (ownerNum == 2) 
+			{
+				sr.color = rcm.pinkBright;
+			}
 		}
 	}
 
