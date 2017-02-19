@@ -56,7 +56,7 @@ MonoBehaviour:
   blueBright: {r: 0.11724138, g: 0, b: 1, a: 1}
   blueLerp: {r: 0, g: 0, b: 0, a: 1}
   pinkDark: {r: 0.6397059, g: 0.18344505, b: 0.60823965, a: 1}
-  pinkBright: {r: 1, g: 0, b: 0.8896551, a: 1}
+  pinkBright: {r: 1, g: 0, b: 0.4344826, a: 1}
   pinkLerp: {r: 0, g: 0, b: 0, a: 1}
   white: {r: 1, g: 1, b: 1, a: 1}
   lerpSpeed: 10
