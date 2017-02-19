@@ -14,6 +14,7 @@ public class MurderBabyFanControls : MonoBehaviour {
 	public GameObject ghostP2;
 	public float launchSpeed;
 	public float launchStun;
+	private Room currentRoom;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,10 @@ public class MurderBabyFanControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ProcessInput ();
+		if (ownerNum != 0) {
+			ProcessInput ();
+			CheckForSpoop ();
+		}
 	}
 
 	void FixedUpdate(){
@@ -59,7 +63,7 @@ public class MurderBabyFanControls : MonoBehaviour {
 		}
 	}
 
-	public void UnPossess(bool withStun){
+	void UnPossess(bool withStun){
 		if (ownerNum != 0) {
 			GameObject ghost = null;
 			if (ownerNum == 1) {
@@ -73,8 +77,22 @@ public class MurderBabyFanControls : MonoBehaviour {
 				Vector3 launchDirection = new Vector3 (xLaunch, yLaunch, 0);
 				ghost.GetComponent<Rigidbody2D> ().velocity = launchDirection.normalized * launchSpeed;
 				ghost.GetComponent<GhostControls> ().hitstunRemaining = launchStun;
+			} else {
+				ghost.GetComponent<Rigidbody2D> ().velocity = Vector3.zero;
 			}
 			SetPossessionStatus (0);
 		}
+	}
+
+	void CheckForSpoop(){
+		if ((currentRoom.isSpoopyforBlue && (ownerNum == 1)) || (currentRoom.isSpoopyforPink && (ownerNum == 2))){
+			UnPossess (true);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+		if (collider.gameObject.tag == "Room") {
+			currentRoom = collider.gameObject.GetComponent<Room> ();
+		} 
 	}
 }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212961064855763370}
   - component: {fileID: 58786118566539962}
   - component: {fileID: 114642610990559308}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoomDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114247839739256358}
   - component: {fileID: 61627867838327446}
   - component: {fileID: 50503103686972764}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Synth
   m_TagString: HouseObjects
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4811585968615602}
   - component: {fileID: 212652361873736902}
   - component: {fileID: 58465027641386294}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

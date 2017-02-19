@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212576033276014406}
   - component: {fileID: 58882254514719512}
   - component: {fileID: 114767871572317360}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoomDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4740701868127072}
   - component: {fileID: 212304709832736812}
   - component: {fileID: 58738128714200130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114126575700308576}
   - component: {fileID: 61893921793365270}
   - component: {fileID: 50442617528823674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Lamp
   m_TagString: HouseObjects
   m_Icon: {fileID: 0}
