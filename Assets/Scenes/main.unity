@@ -350,6 +350,7 @@ MonoBehaviour:
   isClaimable: 0
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -357,7 +358,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 0}
+  blueTweet: {fileID: 0}
+  pinkTweet: {fileID: 0}
 --- !u!1 &258317743
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +461,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -465,7 +469,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: d89f59d3f3855dd4a99e0e43063cd20e, type: 3}
+  mbfTweet: {fileID: 21300000, guid: d89f59d3f3855dd4a99e0e43063cd20e, type: 3}
+  blueTweet: {fileID: 21300000, guid: 86ef2a6409872be4d94c68bd37e75f1a, type: 3}
+  pinkTweet: {fileID: 21300000, guid: ff81e0485733b2f4bb4d219de8d358a4, type: 3}
 --- !u!1 &260877933
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +861,7 @@ MonoBehaviour:
   isClaimable: 0
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -862,7 +869,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 0}
+  blueTweet: {fileID: 0}
+  pinkTweet: {fileID: 0}
 --- !u!1 &382119603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1085,7 @@ MonoBehaviour:
   isClaimable: 0
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -1083,7 +1093,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 0}
+  blueTweet: {fileID: 0}
+  pinkTweet: {fileID: 0}
 --- !u!1 &453803738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1196,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -1191,7 +1204,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 865847210839d7b4ab718b16ff4ceacf, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 865847210839d7b4ab718b16ff4ceacf, type: 3}
+  blueTweet: {fileID: 21300000, guid: b4f3dde62b9d9124091925bdb5ba860b, type: 3}
+  pinkTweet: {fileID: 21300000, guid: a99b0eed0de2ccc49a4d0110c5901ce9, type: 3}
 --- !u!1 &464708511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,6 +1436,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -1428,7 +1444,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: effae638fd963c9489944c224717800a, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 319b4c338ff2cc94983b37fca2337af3, type: 3}
+  blueTweet: {fileID: 21300000, guid: 23dbef634dfef5b4c8cf720a7ea72d72, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 81070bb29ebbce2459f7d0861207cb7c, type: 3}
 --- !u!1 &538987117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1988,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -1977,7 +1996,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 21300000, guid: 1dc281130dd99e0449aaff6261801ed3, type: 3}
+  blueTweet: {fileID: 21300000, guid: 46919cb88761bdb4793275493f23c9bc, type: 3}
+  pinkTweet: {fileID: 21300000, guid: c0d723e330888ad42bcff73b3afa2755, type: 3}
 --- !u!1 &904757638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2299,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -2285,7 +2307,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: b72fbba79959efb44a46b4b5b120bd96, type: 3}
+  mbfTweet: {fileID: 21300000, guid: b72fbba79959efb44a46b4b5b120bd96, type: 3}
+  blueTweet: {fileID: 21300000, guid: b41f606d856d68444b8a8d5a51f9330e, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 83cd938c164b1dc42bf0c11d941f073a, type: 3}
 --- !u!1 &1035376534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2928,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -2911,7 +2936,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: de2182f94e8a7d44390f33ea92779909, type: 3}
+  mbfTweet: {fileID: 21300000, guid: de2182f94e8a7d44390f33ea92779909, type: 3}
+  blueTweet: {fileID: 21300000, guid: 2eab5bb1b2c32a04f9d77957d325facb, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 20cf3e16de27481449c16edb609091f6, type: 3}
 --- !u!1 &1379849312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3153,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3133,7 +3161,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 319b4c338ff2cc94983b37fca2337af3, type: 3}
+  mbfTweet: {fileID: 21300000, guid: effae638fd963c9489944c224717800a, type: 3}
+  blueTweet: {fileID: 21300000, guid: f2720d6b09c629d4583e4ab45efa12f7, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 6e1f2921e55807049894a0376498ccec, type: 3}
 --- !u!1 &1478621962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,6 +3282,7 @@ MonoBehaviour:
   isClaimable: 0
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3259,7 +3290,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 0}
+  blueTweet: {fileID: 0}
+  pinkTweet: {fileID: 0}
 --- !u!1 &1572051216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,6 +3436,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3410,7 +3444,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 9887a4531765b16429d51fcfdf17b101, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 9887a4531765b16429d51fcfdf17b101, type: 3}
+  blueTweet: {fileID: 21300000, guid: 5229859590b90b1479a09efd995d0fb1, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 9e1a6f9cb1194fb4db119847bc00eafc, type: 3}
 --- !u!1 &1621625999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,6 +3735,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3706,7 +3743,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: fe8ae899760998c429562bda0c702480, type: 3}
+  mbfTweet: {fileID: 21300000, guid: fe8ae899760998c429562bda0c702480, type: 3}
+  blueTweet: {fileID: 21300000, guid: f8f73a648f5472b44b84236daca2a652, type: 3}
+  pinkTweet: {fileID: 21300000, guid: c5229087f2e1635409498121e614207e, type: 3}
 --- !u!1 &1716268796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3889,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3857,7 +3897,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 68dce1e3e5d31b741a4a6ece33324d75, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 68dce1e3e5d31b741a4a6ece33324d75, type: 3}
+  blueTweet: {fileID: 21300000, guid: ec84c37b4d29cd0498f70c8c4d4444c0, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 8895a15f7af0d924f84db83c033d075e, type: 3}
 --- !u!1 &1742042673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,6 +4005,7 @@ MonoBehaviour:
   isClaimable: 0
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -3970,7 +4013,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0
-  tweet: {fileID: 0}
+  mbfTweet: {fileID: 0}
+  blueTweet: {fileID: 0}
+  pinkTweet: {fileID: 0}
 --- !u!1 &1839672228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4202,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -4164,7 +4210,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 17bb2927d8521724e8463300bae775c9, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 17bb2927d8521724e8463300bae775c9, type: 3}
+  blueTweet: {fileID: 21300000, guid: 95f614b50a183544d8cd2243ef9d010f, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 150873fd9908e184ea111e885b522f74, type: 3}
 --- !u!1 &1899965275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4356,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -4315,7 +4364,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: 0fd435064d5897b4dae78b40890b2b9f, type: 3}
+  mbfTweet: {fileID: 21300000, guid: 0fd435064d5897b4dae78b40890b2b9f, type: 3}
+  blueTweet: {fileID: 21300000, guid: b2a4cdf99007f91459ddab29ca109ad7, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 9b71189e548fb3c469f2179e7c91de8f, type: 3}
 --- !u!1 &2003665917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,6 +4531,7 @@ MonoBehaviour:
   isClaimable: 1
   isSpoopyforPink: 0
   isSpoopyforBlue: 0
+  isEmpty: 1
   spoopTimer: 0
   spoopLimit: 10
   whoSpooped: 0
@@ -4487,7 +4539,9 @@ MonoBehaviour:
   ownerNum: 0
   fillProportion: 0
   fillRate: 0.01
-  tweet: {fileID: 21300000, guid: a3291512e643cbd42a2996e63cd7bd21, type: 3}
+  mbfTweet: {fileID: 21300000, guid: a3291512e643cbd42a2996e63cd7bd21, type: 3}
+  blueTweet: {fileID: 21300000, guid: 5b2d9fe4c5f995842a8ff9cff70c2239, type: 3}
+  pinkTweet: {fileID: 21300000, guid: 2dadca29ba1cba2458ed0cc35058d74d, type: 3}
 --- !u!1 &2016802401
 GameObject:
   m_ObjectHideFlags: 0

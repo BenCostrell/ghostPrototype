@@ -19,7 +19,9 @@ public class Room : MonoBehaviour {
 	public int ownerNum;
 	public float fillProportion;
 	public float fillRate;
-	public Sprite tweet;
+	public Sprite mbfTweet;
+	public Sprite blueTweet;
+	public Sprite pinkTweet;
 	SpriteRenderer sr;
 	GameObject colorManager;
 	RoomColorManager rcm;
@@ -96,15 +98,19 @@ public class Room : MonoBehaviour {
 		}
 		if (fillProportion >= 1) {
 			Debug.Log ("finished claiming for player " + ownerNum);
+			Sprite ghostTweet = null;
 			if (ownerNum == 1) 
 			{
 				sr.color = rcm.blueBright;
+				ghostTweet = blueTweet;
 			}
 			if (ownerNum == 2) 
 			{
 				sr.color = rcm.pinkBright;
+				ghostTweet = pinkTweet;
 			}
-			tweetManager.Tweet (tweet);
+			tweetManager.Tweet (mbfTweet);
+			tweetManager.Tweet (ghostTweet);
 		}
 	}
 
