@@ -97,7 +97,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D collider){
+	void OnTriggerStay2D(Collider2D collider){
 		if (collider.gameObject.tag == "Room") {
 			currentRoom = collider.gameObject.GetComponent<Room> ();
 		} 

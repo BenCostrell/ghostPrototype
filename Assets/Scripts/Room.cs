@@ -109,8 +109,9 @@ public class Room : MonoBehaviour {
 				sr.color = rcm.pinkBright;
 				ghostTweet = pinkTweet;
 			}
-			tweetManager.Tweet (mbfTweet);
-			tweetManager.Tweet (ghostTweet);
+			Vector3 location = GetComponent<BoxCollider2D> ().bounds.center;
+			tweetManager.Tweet (mbfTweet, location);
+			//tweetManager.Tweet (ghostTweet);
 		}
 	}
 

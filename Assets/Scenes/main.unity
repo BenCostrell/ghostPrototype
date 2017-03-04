@@ -329,9 +329,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.08350563, y: 0}
+  m_Offset: {x: 0.08350563, y: 0.0886724}
   serializedVersion: 2
-  m_Size: {x: 5.509272, y: 1}
+  m_Size: {x: 5.509272, y: 0.8226552}
 --- !u!114 &249791195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,9 +840,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.34584212}
+  m_Offset: {x: 0.14475393, y: 0.3699677}
   serializedVersion: 2
-  m_Size: {x: 1, y: 6.0840116}
+  m_Size: {x: 0.710492, y: 6.0357604}
 --- !u!114 &371035053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,9 +1064,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.013916969, y: 0.00000047683716}
+  m_Offset: {x: 0.22076917, y: 0.035316706}
   serializedVersion: 2
-  m_Size: {x: 1.8072156, y: 1.2783499}
+  m_Size: {x: 1.7971253, y: 1.30862}
 --- !u!114 &442083486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,6 +1828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef0e4ec7322b498c9035e20878a906f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tweetPrefab: {fileID: 1543700667506632, guid: 58231aa3b079b604c9aab89d57fb0ca7,
+    type: 2}
 --- !u!4 &803526777
 Transform:
   m_ObjectHideFlags: 0
@@ -3261,9 +3263,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -0.027835011, y: 0.33401918}
+  m_Offset: {x: -0.12533677, y: 0.3291725}
   serializedVersion: 2
-  m_Size: {x: 1.05567, y: 5.5092726}
+  m_Size: {x: 1.1206713, y: 5.9089727}
 --- !u!114 &1504313074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3984,9 +3986,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.069588184, y: 0.013917923}
+  m_Offset: {x: 0.10076976, y: -0.061808348}
   serializedVersion: 2
-  m_Size: {x: 5.537108, y: 1.6402054}
+  m_Size: {x: 5.5460167, y: 1.4887528}
 --- !u!114 &1819754642
 MonoBehaviour:
   m_ObjectHideFlags: 0
